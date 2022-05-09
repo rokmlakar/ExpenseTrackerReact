@@ -1,23 +1,26 @@
-import { Header } from './components/Header';
-import './App.css';
-import { Balance } from './components/Balance';
-import { IncomeExpenses } from './components/IncomeExpenses';
-import { TransactionList } from './components/TransactionList';
-import { AddTransaction } from './components/AddTransaction';
-
-import { GlobalProvider } from './context/GlobalState'
+import { Home } from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Login from "./pages/Login";
+import Single from "./pages/Single";
+import New from "./pages/New";
 
 function App() {
   return (
-    <GlobalProvider>
-      <Header />
-      <div className='container'>
-        <Balance />
-        <IncomeExpenses />
-        <TransactionList />
-        <AddTransaction />
-      </div>
-    </GlobalProvider>
+    <div className='App'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Home />}></Route>
+            <Route path="login" element={<Login />}>
+              <Route path="user:Id" element={<Single />}></Route>
+            </Route>
+            <Route path="expenses" element={<Single />}>
+              <Route path="new" element={<New></New>}></Route>
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
