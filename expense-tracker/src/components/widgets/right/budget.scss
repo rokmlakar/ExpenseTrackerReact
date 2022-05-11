@@ -1,0 +1,23 @@
+.budget-main {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    .btn-bud {
+        text-align: center;
+        align-items: center;
+        padding: 10px;
+        background-color: #48C9B0;
+        border: none;
+        border-radius: 10px;
+        -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+        box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #48c9af39;
+        }
+    }
+}
