@@ -9,10 +9,10 @@ const Navbar = () => {
         <div className="search">
           <input type="text" placeholder='Search..' />
           <SearchIcon />
-          <div className="items">
-            <div className="item">
-              <img src="https://www.blexar.com/avatar.png" className='avatar' alt="" />
-            </div>
+        </div>
+        <div className="items">
+          <div className="item">
+            <img src="https://www.blexar.com/avatar.png" className='avatar' alt="" />
           </div>
         </div>
       </div>
